@@ -1,2 +1,2 @@
 [dev]
-15.206.117.155 ansible_user=dev
+15.206.117.155  ansible_ssh_pass=suryateja ansible_ssh_user=dev
