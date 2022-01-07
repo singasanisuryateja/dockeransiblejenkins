@@ -2,22 +2,22 @@
 - hosts: dev
   become: True
   tasks:
-  - name: install pip3
-    apt: name=python3-pip state=present 
-  - name: Install docker
+    - name: install pip3
+      apt: name=python3-pip state=present 
+    - name: Install docker
       apt:
         name: docker
         state: present
-   - name: start docker
+    - name: start docker
       service:
         name: docker
         state: started
         enabled: yes
-   - name: Install docker-py python module
+    - name: Install docker-py python module
       pip:
         name: docker-py
         state: present
-   - name: Start the container
+    - name: Start the container
       docker_container:
         name: suryaapp
         image: "singasanisuryateja/suryaapp:{{DOCKER_TAG}}"
