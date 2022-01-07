@@ -19,8 +19,8 @@
         state: present
     - name: Start the container
       docker_container:
-        name: suryaapp
-        image: "singasanisuryateja/suryaapp:{{DOCKER_TAG}}"
+        name: dockeransiblejenkins
+        image: "singasanisuryateja/dockeransiblejenkins:{{DOCKER_TAG}}"
         state: started
         published_ports:
           - 0.0.0.0:8080:8080
